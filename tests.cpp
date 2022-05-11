@@ -12,13 +12,13 @@ TEST(function_test, empty_convertion_to_bool)
 {
     function<void ()> x;
     EXPECT_FALSE(static_cast<bool>(x));
-    EXPECT_THROW(x(), bad_function_call);
+    EXPECT_THROW(x(), std::bad_function_call);
 }
 
 TEST(function_test, empty_call)
 {
     function<void ()> x;
-    EXPECT_THROW(x(), bad_function_call);
+    EXPECT_THROW(x(), std::bad_function_call);
 }
 
 TEST(function_test, empty_copy_move)
